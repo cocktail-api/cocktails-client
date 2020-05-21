@@ -1,2 +1,13 @@
-<h1>Sers</h1>
-<p>Hier könnte Ihr Inhalt stehen</p>
+<ng-container *ngIf="!isAuthenticated">
+  <button mat-raised-button color="primary" (click)="login()">Login</button>
+</ng-container>
+
+<ng-container *ngIf="isAuthenticated">
+  <h1>Sers {{ userName }}</h1>
+  <p>Hier könnte Ihr Inhalt stehen</p>
+  <br />
+  <br />
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</ng-container>
+
+<router-outlet></router-outlet>
