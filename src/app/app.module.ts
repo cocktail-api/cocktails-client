@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
 import { MatButtonModule } from '@angular/material/button';
+import { LoginComponent } from './login/login.component';
 
 const oktaConfig = {
   clientId: '0oaclzf69sveYfurb4x6',
@@ -16,7 +17,7 @@ const oktaConfig = {
 };
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
